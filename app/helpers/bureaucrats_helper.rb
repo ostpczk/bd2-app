@@ -1,0 +1,2 @@
+module BureaucratsHelper
+end

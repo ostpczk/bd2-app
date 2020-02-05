@@ -1,0 +1,2 @@
+class CourseFormsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module ClassParticipationsHelper
+end

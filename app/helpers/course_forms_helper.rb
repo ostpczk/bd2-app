@@ -1,0 +1,2 @@
+module CourseFormsHelper
+end

@@ -1,0 +1,23 @@
+        <div class='all'>
+            <div id='box-login'>
+                <div id='sign'>
+                    <b>
+                        Dziennik uczelni
+                    </b>
+                </div>
+            </div>
+
+            <div class='help'>
+
+                  <%= form_for(:session, url: sessions_path) do |f| %>
+                  <%= f.text_field :login, :placeholder => "login", :id => 'login-field' %>
+    
+
+                  <%= f.password_field :password, :placeholder => "hasło", :id => 'password-field' %>
+                  <%= f.submit "Sign in", class: "btn btn-large btn-primary", :id => "login-button" %>
+                  <% end %>
+
+            </div>
+
+            </div>
+    <footer></footer>

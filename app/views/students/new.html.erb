@@ -1,0 +1,36 @@
+    <main>
+        <div class='all'>
+            <div id='box-login'>
+                <div id='sign'>
+                    <b>
+                        Rejestracja
+                    </b>
+                </div>
+            </div>
+
+            <div class='help'>
+
+                  <%= form_for(:student, url: students_path) do |f| %>
+                  <%= f.text_field :first_name, :placeholder => "Imię", :id => 'first-name-field' %>
+                  <%= f.text_field :middle_name, :placeholder => "Drugie imię", :id => 'middle-name-field' %>
+                  <%= f.text_field :last_name, :placeholder => "Nazwisko", :id => 'last-name-field' %>
+                  <%= f.date_select :birth_date, :placeholder => "Data urodzenia", :id => 'birth-date-field' %>
+                  <%= f.email_field :email, :placeholder => "E-mail", :id => 'email-field' %>
+                  <%= f.password_field :password, :placeholder => "Hasło", :id => 'password-field' %>
+
+                  <%= f.fields_for(:address) do |ad| %>
+                  <%= ad.text_field :street_name, :placeholder => "Nazwa ulicy", :id => 'street-name-field' %>
+                  <%= ad.text_field :house_number, :placeholder => "Numer domu", :id => 'house-number-field' %>
+                  <%= ad.text_field :flat_number, :placeholder => "Numer mieszkania", :id => 'flat-number-field' %>
+                  <%= ad.text_field :city, :placeholder => "Miasto", :id => 'city-field' %>
+                  <%= ad.text_field :postal_code, :placeholder => "Kod pocztowy", :id => 'postal-code-field' %>
+                  <%= ad.country_select :country %>    
+                  <% end %>
+
+    
+
+                  <%= f.submit "Rejestracja", class: "btn btn-large btn-primary", :id => "sign-up-button" %>
+                  <% end %>
+
+        </div>
+    </main>

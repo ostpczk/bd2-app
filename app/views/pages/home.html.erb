@@ -1,0 +1,19 @@
+        <div class='all'>
+            <div id='box-login'>
+                <div id='sign'>
+                    <b>
+                      Dziennik uczelni
+                      <% flash.each do |type, msg| %>
+                        <div>
+                          <%= msg %>
+                        </div>
+                      <% end %>
+                    </b>
+                </div>
+          <%= link_to("Rejestracja", {action: "new", controller: "students"}, class: "butt", id: "register-button")%>
+          <%= link_to("Logowanie", {action: "new", controller: "sessions"}, class: "butt", id: "login-button") %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
